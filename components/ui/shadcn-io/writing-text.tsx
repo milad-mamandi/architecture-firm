@@ -48,8 +48,10 @@ function WritingText({
             'will-change-opacity inline-block will-change-transform',
             className,
           )}
-          initial={{ opacity: 0, y: 10 }}
-          animate={isInView ? { opacity: 1, y: 0 } : undefined}
+          initial={{ opacity: 0, y: 10, filter: 'blur(10px)' }}
+          animate={
+            isInView ? { opacity: 1, y: 0, filter: 'blur(0)' } : undefined
+          }
           transition={{
             ...transition,
             delay: index * (transition?.delay ?? 0),
