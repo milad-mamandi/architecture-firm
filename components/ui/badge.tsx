@@ -17,6 +17,10 @@ const badgeVariants = cva(
         outline:
           'text-foreground [a&]:hover:bg-accent [a&]:hover:text-accent-foreground',
         moto: 'bg-secondary border-muted-foreground text-secondary-foreground rounded-2xl border px-6 text-lg font-light lg:text-xl [a&]:hover:bg-secondary/90',
+        amenity:
+          'bg-secondary border-border text-secondary-foreground rounded-3xl gap-2 border px-6 py-1.5 text-sm font-light lg:text-base [a&]:hover:bg-secondary/90 [&>svg]:size-5',
+        disabled:
+          'bg-muted text-muted-foreground border-transparent cursor-not-allowed gap-2 rounded-3xl px-6 py-1.5 text-sm font-light lg:text-base [&>svg]:size-5',
       },
     },
     defaultVariants: {

@@ -13,3 +13,7 @@ export function getInitials(name: string) {
   const lastInitial = namesArray[namesArray.length - 1].charAt(0).toUpperCase()
   return firstInitial + lastInitial
 }
+
+export function formatNumber(num: number) {
+  return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+}

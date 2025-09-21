@@ -17,7 +17,7 @@ export default function HeroImage() {
   return (
     <>
       <motion.div
-        className="absolute inset-0 bg-black"
+        className="absolute inset-0 z-10 bg-black"
         initial={{ opacity: 1 }}
         animate={{ opacity: 0.2 }}
         transition={{ duration: ANIMATION.duration, ease: ANIMATION.ease }}

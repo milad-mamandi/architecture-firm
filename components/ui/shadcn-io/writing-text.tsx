@@ -21,11 +21,16 @@ type WritingTextProps = Omit<React.ComponentProps<'span'>, 'children'> & {
 function WritingText({
   className,
   ref,
-  inView = false,
+  inView = true,
   inViewMargin = '0px',
   inViewOnce = true,
   text,
-  transition = { type: 'spring', bounce: 0, duration: 1, delay: 0.15 },
+  transition = {
+    type: 'spring',
+    stiffness: 400,
+    damping: 36,
+    delay: 0.04,
+  },
   ...props
 }: WritingTextProps) {
   const localRef = React.useRef<HTMLSpanElement>(null)
@@ -45,10 +50,10 @@ function WritingText({
         <motion.span
           key={index}
           className={cn(
-            'will-change-opacity inline-block will-change-transform',
+            'will-change-opacity mr-2 inline-block text-2xl font-medium uppercase will-change-transform lg:mr-3.5 lg:text-4xl',
             className,
           )}
-          initial={{ opacity: 0, y: 10, filter: 'blur(10px)' }}
+          initial={{ opacity: 0, y: 10, filter: 'blur(5px)' }}
           animate={
             isInView ? { opacity: 1, y: 0, filter: 'blur(0)' } : undefined
           }

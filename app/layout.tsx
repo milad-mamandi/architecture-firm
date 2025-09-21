@@ -1,4 +1,6 @@
+import Footer from '@/components/footer'
 import Navbar from '@/components/navbar'
+import { Toaster } from '@/components/ui/sonner'
 import type { Metadata } from 'next'
 import { Roboto } from 'next/font/google'
 
@@ -23,10 +25,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${robotoSans.variable} antialiased [--nav-height:--spacing(16)] lg:[--nav-height:--spacing(20)]`}
+        className={`${robotoSans.variable} antialiased [--nav-height:--spacing(16)] md:[--nav-height:--spacing(18)]`}
       >
         <Navbar />
         <div className="mt-[var(--nav-height)]">{children}</div>
+        <Footer />
+        <Toaster richColors />
       </body>
     </html>
   )

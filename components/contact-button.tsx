@@ -16,15 +16,16 @@ export default function ContactButton({
     <div className="flex w-[220px] justify-end overflow-visible">
       <motion.div
         className={cn(
-          'bg-primary text-primary-foreground group w-[200px] cursor-pointer rounded-4xl py-1.5 ps-4 pe-1.5',
+          'bg-primary text-primary-foreground group w-[200px] cursor-pointer rounded-4xl py-[5px] ps-3 pe-1.5',
           className,
         )}
-        initial={{ scaleX: 1 }}
+        initial={{ width: '200px' }}
         whileHover={{
           width: '220px',
           transition: {
-            duration: 0.4,
             type: spring,
+            stiffness: 400,
+            damping: 20,
           },
         }}
         whileTap={{
@@ -40,7 +41,7 @@ export default function ContactButton({
               animate={{ scale: [1, 1.3, 1] }}
               transition={{ duration: 1, repeat: Infinity, ease: 'easeInOut' }}
             />
-            <span className="text-lg">Contact Us</span>
+            <span className="text-base tracking-tight">Contact Us Now</span>
             <div className="bg-background text-foreground relative flex size-8 items-center justify-center overflow-hidden rounded-full">
               <ArrowUpRightIcon className="transition-transform duration-200 group-hover:translate-x-8 group-hover:-translate-y-8" />
               <ArrowUpRightIcon className="absolute -translate-x-8 translate-y-8 transition-transform duration-200 group-hover:translate-0" />
