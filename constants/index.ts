@@ -3,11 +3,11 @@ import { ChartLineIcon, HandshakeIcon, HouseIcon, KeyIcon, LeafIcon, ReceiptIcon
 import { title } from "process"
 
 export const NAV_ITEMS = [
-    { name: 'Home', href: '#home' },
-    { name: 'Services', href: '#services' },
-    { name: 'Properties', href: '#properties' },
-    { name: 'About', href: '#about' },
-    { name: 'Agents', href: '#agents' },
+    { name: 'Home', href: '/#home' },
+    { name: 'Services', href: '/#services' },
+    { name: 'Properties', href: '/#properties' },
+    { name: 'About', href: '/#about' },
+    { name: 'Agents', href: '/#agents' },
 ]
 
 export const AGENTS = [

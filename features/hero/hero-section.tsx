@@ -9,7 +9,7 @@ import HeroImage from './components/hero-image'
 export default function HeroSection() {
   return (
     <section
-      className="h-[calc(100vh-(--spacing(20)))] pb-4 md:pt-4 md:pb-10"
+      className="h-[calc(100vh-(--spacing(18)))] pb-4 md:pt-4 md:pb-10"
       id="home"
     >
       <div className="relative h-full">

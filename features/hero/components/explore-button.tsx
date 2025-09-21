@@ -5,7 +5,7 @@ import { motion } from 'motion/react'
 
 export default function ExploreButton() {
   return (
-    <a href={'#'}>
+    <a href="#properties">
       <div className="group bg-background flex w-fit flex-row items-center justify-between gap-2 rounded-4xl py-1 pr-1 pl-4 transition-all duration-300 ease-in-out hover:gap-6 md:py-2.5 md:pr-1.5 md:pl-4">
         <span>Explore Properties</span>
         <div className="bg-foreground text-background relative flex size-8 items-center justify-center overflow-hidden rounded-full">

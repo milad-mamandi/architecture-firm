@@ -6,7 +6,7 @@ import { Menu } from 'lucide-react'
 import { motion, spring } from 'motion/react'
 import Image from 'next/image'
 
-import ContactButton from './contact-button'
+import AnimatedButton from './animated-button'
 import { Button } from './ui/button'
 import { RollingText } from './ui/shadcn-io/rolling-text'
 
@@ -19,7 +19,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           <div className="flex w-[220px] items-center">
             <a
-              href="#"
+              href="/"
               className="flex items-center text-xl font-semibold text-gray-800"
             >
               <Image
@@ -41,7 +41,7 @@ export default function Navbar() {
               ))}
             </div>
           </div>
-          <ContactButton href="#contact" className="ml-auto hidden lg:block" />
+          <AnimatedButton href="#contact" className="ml-auto hidden lg:block" />
           <div className="flex lg:hidden">
             <Button variant="ghost" size="icon" onClick={toggle}>
               <Menu />
@@ -65,7 +65,7 @@ export default function Navbar() {
               {item.name}
             </a>
           ))}
-          <ContactButton href="#contact" />
+          <AnimatedButton href="#contact" />
         </div>
       </motion.div>
     </nav>

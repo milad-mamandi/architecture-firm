@@ -2,18 +2,20 @@ import { cn } from '@/lib/utils'
 import { ArrowUpRightIcon } from 'lucide-react'
 import { MotionProps, motion, spring } from 'motion/react'
 
-type ContactButtonProps = MotionProps & {
+type AnimatedButtonProps = MotionProps & {
   href: string
   className?: string
+  text?: string
 }
 
-export default function ContactButton({
+export default function AnimatedButton({
   href,
   className,
+  text = 'Contact Us Now',
   ...props
-}: ContactButtonProps) {
+}: AnimatedButtonProps) {
   return (
-    <div className="flex w-[220px] justify-end overflow-visible">
+    <div className="flex w-[220px] justify-end">
       <motion.div
         className={cn(
           'bg-primary text-primary-foreground group w-[200px] cursor-pointer rounded-4xl py-[5px] ps-3 pe-1.5',
@@ -41,7 +43,7 @@ export default function ContactButton({
               animate={{ scale: [1, 1.3, 1] }}
               transition={{ duration: 1, repeat: Infinity, ease: 'easeInOut' }}
             />
-            <span className="text-base tracking-tight">Contact Us Now</span>
+            <span className="text-base tracking-tight">{text}</span>
             <div className="bg-background text-foreground relative flex size-8 items-center justify-center overflow-hidden rounded-full">
               <ArrowUpRightIcon className="transition-transform duration-200 group-hover:translate-x-8 group-hover:-translate-y-8" />
               <ArrowUpRightIcon className="absolute -translate-x-8 translate-y-8 transition-transform duration-200 group-hover:translate-0" />
